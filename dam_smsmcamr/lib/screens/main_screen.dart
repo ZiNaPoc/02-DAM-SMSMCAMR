@@ -17,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _pantallas = const [
     HomeScreen(),
     FavoritosScreen(),
-    AcercaScreen(), // Se utiliza como pantalla Acerca de
+    AcercadeScreen(), 
   ];
 
  

@@ -31,10 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Platillos Ancestrales de Quintana Roo"),
-        backgroundColor: const Color.fromARGB(255, 20, 11, 141),
+        backgroundColor: const Color.fromARGB(255, 68, 138, 255),
       ),
       body: SingleChildScrollView(
-        child: Column(
+      padding: EdgeInsets.all(16),        
+      child: Column(
           children: [
             Text(
               "Bienvenido a la aplicación de Platillos Ancestrales de Quintana Roo",
