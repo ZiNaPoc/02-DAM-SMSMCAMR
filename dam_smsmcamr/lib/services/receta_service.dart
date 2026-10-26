@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:TU_PROYECTO/models/receta.dart';
+import 'package:02-DAM-SMSMCAMR/models/receta.dart';
 
 class RecetaService {
   static const String _baseUrl = 'https://dummyjson.com/recipes
