@@ -1,3 +1,4 @@
+import 'package:dam_smsmcamr/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,8 +10,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: "Platillos Ancestrales de Quintana Roo",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(), 
     );
   }
 }
