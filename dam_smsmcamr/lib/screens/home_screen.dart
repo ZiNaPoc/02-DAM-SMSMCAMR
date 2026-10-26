@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-class PerfilScreen extends StatelessWidget {
-  const PerfilScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context){
-
       void _mostrarMensajeTemporal(){
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content:
