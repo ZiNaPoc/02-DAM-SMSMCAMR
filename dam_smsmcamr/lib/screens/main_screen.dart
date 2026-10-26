@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+import 'package:02-DAM-SMSMCAMR/screens/home_screen.dart';
+import 'package:02-DAM-SMSMCAMR/screens/favoritos_screen.dart';
+import 'package:02-DAM-SMSMCAMR/screens/acerca_screen.dart';
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  int _indiceActual = 0;
+
+ 
+  final List<Widget> _pantallas = const [
+    HomeScreen(),
+    FavoritosScreen(),
+    PerfilScreen(), // Se utiliza como pantalla Acerca de
+  ];
+
+ 
+  void _cambiarPantalla(int index) {
+    setState(() {
+      _indiceActual = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: IndexedStack(
+        index: _indiceActual,
+        children: _pantallas,
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _indiceActual,
+        onTap: _cambiarPantalla,
+        selectedItemColor: const Color.fromARGB(255, 52, 52, 127),
+        unselectedItemColor: const Color.fromARGB(255, 141, 131, 184),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_outline),
+            activeIcon: Icon(Icons.favorite),
+            label: 'Favoritos',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info_outline),
+            activeIcon: Icon(Icons.info),
+            label: 'Acerca de',
+          ),
+        ],
+      ),
+    );
+  }
+}
