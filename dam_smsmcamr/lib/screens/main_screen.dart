@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:02-DAM-SMSMCAMR/screens/home_screen.dart';
-import 'package:02-DAM-SMSMCAMR/screens/favoritos_screen.dart';
-import 'package:02-DAM-SMSMCAMR/screens/acerca_screen.dart';
+import 'package:dam_smsmcamr/screens/favoritos_screen.dart';
+import 'package:dam_smsmcamr/screens/home_screen.dart';
+import 'package:dam_smsmcamr/screens/acerca_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
