@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:TU_PROYECTO/models/receta.dart';
+import 'package:dam_smsmcamr/models/receta.dart';
 
 class RecetaService {
-  static const String _baseUrl = 'https://dummyjson.com/recipes
+  static const String _baseUrl = 'https://dummyjson.com/recipes';
 
   Future<List<Receta>> obtenerRecetas() async {
     final Uri url = Uri.parse(_baseUrl);
