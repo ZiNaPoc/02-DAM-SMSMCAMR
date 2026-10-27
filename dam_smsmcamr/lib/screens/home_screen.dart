@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _mostrarMensajeTemporal() {
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("Aqui sucedera algo:)")));
+          .showSnackBar(const SnackBar(content: Text("El mapa de los pueblos originarios se está abriendo....")));
     }
 
   @override
@@ -52,14 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Center(child: Text("Error: ${snapshot.data}"));
                 }
                 final productos = snapshot.data!;
-                return GridView.builder(
+                return ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 14,
-                    crossAxisSpacing: 14,
-                  ),
                   itemCount: productos.length,
                   itemBuilder: ((context, index) {
                     final receta = productos[index];
