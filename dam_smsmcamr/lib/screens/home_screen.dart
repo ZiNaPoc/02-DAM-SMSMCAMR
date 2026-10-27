@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _mostrarMensajeTemporal() {
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text("Aqui sucedera algo:)")));
+          .showSnackBar(const SnackBar(content: Text("El mapa de los pueblos originarios se está abriendo...")));
     }
 
   @override
